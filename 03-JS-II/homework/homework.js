@@ -130,7 +130,7 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1 < 0 || num2 < 0 || num3 < 0 ){
-    return "Hay negativo"
+    return "Hay negativos"
   }
   else if (num1 === 0 || num2 === 0 || num3 === 0 ){
     return "Error"
@@ -166,19 +166,30 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
+if (valor === true ){
+  return "Soy verdadero"
+}
+  return "Soy falso"
 }
 
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
+  //Escribe tu código aquí  
+  var array = [];
+  for(var x = 0; x<11; x++){
+    array.push (x*6)
+  }
+  return array; 
   
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
+  if(numero>99 && numero<1000) return true
+    
+  return false
   
 }
 
@@ -186,6 +197,14 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var x = 0;
+  do{
+     x = x + 1
+     numero = numero + 5
+  }
+  while ( x < 8 )
+
+  return numero
 }
 
 
